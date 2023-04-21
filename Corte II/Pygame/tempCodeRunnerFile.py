@@ -1,0 +1,1 @@
+self.show_text(Footer3,580,690)
