@@ -152,13 +152,15 @@ class SingleLinkedList:
         elif index == self.length:
             self.delete_node_sll_pop()
         else:
-            remove_node_sll=self.get_node(index)
-            if remove_node_sll!= None:
-                previous_node = self.get_node(index-1)
+            remove_node_sll = self.get_node(index)
+            if remove_node_sll != None:
+                previous_node = self.get_node(index - 1)
+                print("Se va a eliminar: ",self.get_node(index).value)
                 previous_node.next = remove_node_sll.next
                 remove_node_sll.next = None
+                self.length-=1
             else:
-                print(" >> No se encontro el nodo <<")
+                print(" >>> No se encontro el nodo<<<")
 
     def get_length_node(self):
         return self.length
@@ -175,17 +177,26 @@ class SingleLinkedList:
         print("El valor no se encuentra")
 
     def revert_node_list(self):
-        if self.length==0:
-            print("No se puede invertir")
-        else:
-            previous_node=None
-            current_node=self.head
-            while current_node != None:
-                following_node= current_node.next
-                current_node.next = previous_node
-                previous_node=current_node
-                current_node=following_node
-            self.head= previous_node
+        if self.length > 1:
+            aux_head = self.tail
+            aux_tail = self.head
+            if self.length == 2:
+                self.head = aux_head
+                self.head.next = aux_tail
+                self.tail = aux_tail
+                self.tail.next = None
+                return
+            
+            current_node = self.tail
+            for i in range (1, self.length - 1):
+                node = self.get_node(self.length - i)
+                current_node.next = node
+                current_node = node
+            node.next = aux_tail
+            self.head = aux_head
+            self.tail = aux_tail
+            self.tail.next=None
+
 
     def remove_all_nodes(self):
         self.head.next=None
@@ -209,16 +220,18 @@ class SingleLinkedList:
         print(f"Los valores de los nodos de la SLL son: \n {str(array_with_nodes_value)}")
 
     def insert_node(self,value,index):
-        new_node = self.Node(value)
-        insert_node=self.get_node(index)
-        if insert_node!= None:
-            if index ==1:
-                new_node.next=self.head
-                self.head=new_node
-                self.length+=1
-            elif index<=self.length:
-                previous_node=self.get_node(index-1)
-                previous_node.next=new_node
-                new_node.next=insert_node
+        if index == 1:
+            self.create_node_sll_unshift(value)
+        elif index == self.length + 1:
+            self.create_node_sll_ends(value)
         else:
-            print("No se encontro el nodo")
+            new_node = self.Node(value)
+            actual_node_sll = self.get_node(index)
+            if actual_node_sll != None:
+                previous_node = self.get_node(index - 1)
+                previous_node.next = new_node
+                new_node.next = actual_node_sll
+                self.length+=1
+            else:
+                print("No se puede acceder ")
+        return True

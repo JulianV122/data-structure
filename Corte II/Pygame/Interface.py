@@ -1,9 +1,9 @@
 import pygame
 import sys
+import webbrowser
 from colorama import Fore,init
 from SLLPygame import SingleLinkedList
 from combo_box import ComboBox
-
 
 class interface:
     def __init__(self):
@@ -31,6 +31,7 @@ class interface:
         self.pyc_menu = pygame.Rect(460,15,180,40)
         self.arbol_menu = pygame.Rect(780,15,130,40)
         self.grafo_menu = pygame.Rect(1060,15,120,40)
+        self.rectgit = pygame.Rect(732,670,40,40)
         self.combo_box = pygame.Rect(400,282,250,15)
         self.combo_box_pos = pygame.Rect(900,282,250,15)
         self.list_pos = ["1"]
@@ -39,6 +40,8 @@ class interface:
         self.rectaux = pygame.Rect(0,0,0,0)
         self.rectaccept = pygame.Rect(1070,360,140,30)
         self.aux_node = None
+        self.url ="https://github.com/JulianV122/data-structure"
+        self.menu = "SLL"
 
 
 #Crear Texto
@@ -138,60 +141,57 @@ class interface:
         pygame.draw.rect(self.screen,"black",self.rectcrab2,2,0)
         pygame.draw.rect(self.screen,"black",self.rectcrocodile2,2,0)
         pygame.draw.rect(self.screen,"red",self.rectaux,2,0)
-        pygame.draw.rect(self.screen,"gray70",self.sll_menu)
-        pygame.draw.rect(self.screen,"gray70",self.dll_menu)
-        pygame.draw.rect(self.screen,"gray70",self.pyc_menu)
-        pygame.draw.rect(self.screen,"gray70",self.arbol_menu)
-        pygame.draw.rect(self.screen,"gray70",self.grafo_menu)
+        pygame.draw.rect(self.screen,"gray70",self.sll_menu,-1,0)
+        pygame.draw.rect(self.screen,"gray70",self.dll_menu,-1,0)
+        pygame.draw.rect(self.screen,"gray70",self.pyc_menu,-1,0)
+        pygame.draw.rect(self.screen,"gray70",self.arbol_menu,-1,0)
+        pygame.draw.rect(self.screen,"gray70",self.grafo_menu,-1,0)
         pygame.draw.rect(self.screen,"black",self.combo_box,border_radius=3)
         pygame.draw.rect(self.screen,"black",self.combo_box_pos,border_radius=3)
         pygame.draw.rect(self.screen,"chartreuse3",self.rectaccept)
+        pygame.draw.rect(self.screen,"Black",self.rectgit,-1,0)
+
 
 
 #Mostrar las imagenes
     def draw_new_image(self):
         x=70
         y=510
-        i = 1
-        while i < (self.SLL.get_length_node()+1):
+        length=self.SLL.get_length_node()
+        for i in range(1,length+1):
             if ( x < 1170):
                 new_image =pygame.image.load(f"Pygame/images/{self.SLL.get_node_value(i)}.png")
-                #print(self.SLL.get_node_value(i))
                 self.screen.blit(new_image,(x,y))
                 x+=80
-            i+=1
 
 
 #CLick en la cabeza del nodo
     def is_click_head(self):
         mx,my = pygame.mouse.get_pos()
         loc = (mx,my)
-        if self.clicking == True and self.flag_head == True :
+        if self.clicking == True and self.flag_head == True and self.menu=="SLL":
             if self.Rectcat.collidepoint(loc):
                 self.SLL.create_node_sll_unshift("cat")
                 self.rectaux = self.Rectcat
                 self.flag_head = False
-                print(self.SLL.get_length_node())
                 self.SLL.show_list()
             elif self.Rectcrab.collidepoint(loc):
                 self.SLL.create_node_sll_unshift("crab")
                 self.rectaux = self.Rectcrab
                 self.flag_head = False
                 self.SLL.show_list()
-                print(self.SLL.get_length_node())
             elif self.Rectcrocodile.collidepoint(loc):
                 self.SLL.create_node_sll_unshift("Crocodile")
                 self.rectaux = self.Rectcrocodile
                 self.flag_head = False
                 self.SLL.show_list()
-                print(self.SLL.get_length_node())
         else:
             self.rectaux = pygame.Rect(0,0,0,0)
 
 
 #Boton Aceptar
     def is_click_accept(self):
-        if self.clicking == True and self.flag_head == False:
+        if self.clicking == True and self.flag_head == False and self.menu == "SLL":
             if self.Rectdog.collidepoint(pygame.mouse.get_pos()):
                 self.rectaux= self.Rectdog
                 self.aux_node="dog"
@@ -222,6 +222,7 @@ class interface:
                     self.SLL.delete_node_sll_pop()
                 elif self.combo.getIndex()== 5:
                     self.SLL.revert_node_list()
+                    self.draw_new_image()
                 elif self.combo.getIndex()==6:
                     self.SLL.remove_all_nodes()
                 elif self.combo.getIndex() == 7 and self.combo_pos.getIndex != -1:
@@ -243,12 +244,56 @@ class interface:
                     self.aux_node=None
             if self.SLL.length==0:
                 self.flag_head=True
+            self.SLL.show_list()
 
 #Actualizar combo posición
     def update_combo_pos(self):
         if self.clicking == True and self.rectaccept.collidepoint(pygame.mouse.get_pos()):
             list_pos = [str(x) for x in range(1,self.SLL.get_length_node()+1)]
             self.combo_pos.updateOptions(list_pos)
+
+#Abrir url github
+    def open_url(self):
+        if self.clicking == True:
+            if self.rectgit.collidepoint(pygame.mouse.get_pos()):
+                webbrowser.open_new(self.url)
+        else:
+            return None
+        
+
+#Validacion click menu
+    def is_click_menu(self):
+        if self.clicking==True:
+            if self.sll_menu.collidepoint(pygame.mouse.get_pos()):
+                self.menu="SLL"
+            if self.dll_menu.collidepoint(pygame.mouse.get_pos()):
+                self.menu="DLL"
+            if self.arbol_menu.collidepoint(pygame.mouse.get_pos()):
+                self.menu="ARBOL"
+            if self.pyc_menu.collidepoint(pygame.mouse.get_pos()):
+                self.menu="PYC"
+            if self.grafo_menu.collidepoint(pygame.mouse.get_pos()):
+                self.menu="GRAFO"
+
+#Dibujar DLL
+    def draw_DLL(self):
+        pygame.draw.rect(self.screen,"black",self.Rect)
+        pygame.draw.rect(self.screen,"grey",self.Rect2,border_radius=4)
+
+#Dibujar arbol
+    def draw_arbol(self):
+        pygame.draw.rect(self.screen,"black",self.Rect)
+        pygame.draw.rect(self.screen,"grey",self.Rect2,border_radius=4)
+
+#Dibujar pyc
+    def draw_pyc(self):
+        pygame.draw.rect(self.screen,"black",self.Rect)
+        pygame.draw.rect(self.screen,"grey",self.Rect2,border_radius=4)
+
+#Dibujar grafo
+    def draw_grafo(self):
+        pygame.draw.rect(self.screen,"black",self.Rect)
+        pygame.draw.rect(self.screen,"grey",self.Rect2,border_radius=4)
 
 
 #Run
@@ -258,24 +303,33 @@ class interface:
                 if event.type == pygame.QUIT:
                     sys.exit()
                 if event.type == pygame.MOUSEBUTTONDOWN:
-                    if event.button == 1 and self.clicking == False :
+                    if event.button == 1 and self.clicking == False:
                         self.clicking=True
                         self.is_click_head()
-                        #self.is_click_combo()
-                        #self.is_click_combo_pos()
-                        #self.is_click_other()
                         self.is_click_accept()
-                        
+                        self.open_url()
                 if event.type == pygame.MOUSEBUTTONUP:
                     if event.button == 1 :
                         self.clicking = False
-            self.draw_screen()
-            self.all_text()
-            self.draw_images()
-            self.draw_new_image()
-            self.combo_pos.draw()
-            self.combo.draw()
-            self.update_combo_pos()
+            pygame.draw.rect(self.screen,"WHITE",(0,60,1280,600))
+            self.is_click_menu()
+            if self.menu=="SLL":
+                self.draw_screen()
+                self.all_text()
+                self.draw_images()
+                self.draw_new_image()
+                self.combo_pos.draw()
+                self.combo.draw()
+                self.update_combo_pos()
+            if self.menu=="DLL":
+                self.draw_DLL()
+            if self.menu=="ARBOL":
+                self.draw_arbol()
+            if self.menu=="GRAFO":
+                self.draw_grafo()
+            if self.menu=="PYC":
+                self.draw_pyc()
+
             pygame.display.flip()
 
 
