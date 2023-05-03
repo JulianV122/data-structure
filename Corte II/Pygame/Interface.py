@@ -42,6 +42,7 @@ class interface:
         self.aux_node = None
         self.url ="https://github.com/JulianV122/data-structure"
         self.menu = "SLL"
+        self.aux_error = False
 
 
 #Crear Texto
@@ -75,6 +76,7 @@ class interface:
         Footer2 = self.create_text(fuenteSistema4,"Julian Veloza")
         Footer3 = self.create_text(fuenteSistema4,"@ I SEM - 2023")
         ACEPTAR = self.create_text(fuenteSistema2,"ACEPTAR")
+        ERROR = self.create_text(fuenteSistema2,"ERROR TAMAÑO MAXIMO ALCANZADO (7)")
         self.show_text(SLL,75,25)
         self.show_text(DLL,270,25)
         self.show_text(PYC,500,25)
@@ -89,6 +91,8 @@ class interface:
         self.show_text(Footer2,655,672)
         self.show_text(Footer3,580,690)
         self.show_text(ACEPTAR,1100,366)
+        if self.aux_error == True:
+            self.show_text(ERROR,850,550)
 
 
 #Dibujar las imagenes en pantalla
@@ -233,20 +237,24 @@ class interface:
                 elif self.combo.getIndex()==11:
                     self.SLL.replace_list()
             if self.rectaccept.collidepoint(pygame.mouse.get_pos()) and self.aux_node is not None:
-                if self.combo.getIndex() == -1:
-                    return print("No se ha seleccionado ningún metodo")
-                elif self.combo.getIndex() == 1:
-                    self.SLL.create_node_sll_unshift(self.aux_node)
-                    self.aux_node=None
-                elif self.combo.getIndex()==2:
-                    self.SLL.create_node_sll_ends(self.aux_node)
-                    self.aux_node=None
-                elif self.combo.getIndex()== 8 and self.combo.getIndex()!=-1:
-                    self.SLL.insert_node(self.aux_node,self.combo_pos.getIndex())
-                    self.aux_node=None
-                elif self.combo.getIndex()== 9 and self.combo.getIndex()!=-1:
-                    self.SLL.update_node_value(self.combo_pos.getIndex(),self.aux_node)
-                    self.aux_node=None
+                if self.SLL.length < 7:
+                    if self.combo.getIndex() == -1:
+                        return print("No se ha seleccionado ningún metodo")
+                    elif self.combo.getIndex() == 1:
+                        self.SLL.create_node_sll_unshift(self.aux_node)
+                        self.aux_node=None
+                    elif self.combo.getIndex()==2:
+                        self.SLL.create_node_sll_ends(self.aux_node)
+                        self.aux_node=None
+                    elif self.combo.getIndex()== 8 and self.combo.getIndex()!=-1:
+                        self.SLL.insert_node(self.aux_node,self.combo_pos.getIndex())
+                        self.aux_node=None
+                    elif self.combo.getIndex()== 9 and self.combo.getIndex()!=-1:
+                        self.SLL.update_node_value(self.combo_pos.getIndex(),self.aux_node)
+                        self.aux_node=None
+                else:
+                    self.aux_error=True
+                    print("ERROR")
             if self.SLL.length==0:
                 self.flag_head=True
             self.SLL.show_list()
