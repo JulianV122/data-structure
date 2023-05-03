@@ -238,6 +238,7 @@ class interface:
                     self.SLL.replace_list()
             if self.rectaccept.collidepoint(pygame.mouse.get_pos()) and self.aux_node is not None:
                 if self.SLL.length < 7:
+                    self.aux_error=False
                     if self.combo.getIndex() == -1:
                         return print("No se ha seleccionado ningún metodo")
                     elif self.combo.getIndex() == 1:
