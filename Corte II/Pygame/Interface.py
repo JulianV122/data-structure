@@ -35,7 +35,7 @@ class interface:
         self.combo_box = pygame.Rect(400,282,250,15)
         self.combo_box_pos = pygame.Rect(900,282,250,15)
         self.list_pos = ["1"]
-        self.combo = ComboBox(self.screen,["Agregar al principio","Agregar al final","Eliminar el primero","Eliminar el ultimo","Invertir lista","Eliminar todos los elementos","Eliminar por posición","Insertar por posición","Actualizar por posición","Eliminar nodos duplicados"],self.combo_box,"Black","Arial Black",15,4,"White","White",40," Seleccione una opcion")
+        self.combo = ComboBox(self.screen,["Agregar al principio","Agregar al final","Eliminar el primero","Eliminar el ultimo","Invertir lista","Eliminar todos los elementos","Eliminar por posición","Insertar por posición","Actualizar por posición","Eliminar nodos duplicados","Unir duplicados"],self.combo_box,"Black","Arial Black",15,4,"White","White",40," Seleccione una opcion")
         self.combo_pos = ComboBox(self.screen,self.list_pos,self.combo_box_pos,"Black","Arial Black",15,4,"White","White",40," Seleccione la posición")
         self.rectaux = pygame.Rect(0,0,0,0)
         self.rectaccept = pygame.Rect(1070,360,140,30)
@@ -213,6 +213,7 @@ class interface:
             if self.rectcrab2.collidepoint(pygame.mouse.get_pos()):
                 self.rectaux= self.rectcrab2
                 self.aux_node="crab"
+
             if self.rectaccept.collidepoint(pygame.mouse.get_pos()):
                 if self.combo.getIndex()==3:
                     self.aux_node=None
@@ -227,6 +228,8 @@ class interface:
                     self.SLL.remove_all_nodes()
                 elif self.combo.getIndex() == 7 and self.combo_pos.getIndex != -1:
                     self.SLL.remove_node(self.combo_pos.getIndex())
+                elif self.combo.getIndex()==11:
+                    self.SLL.replace_list()
             if self.rectaccept.collidepoint(pygame.mouse.get_pos()) and self.aux_node is not None:
                 if self.combo.getIndex() == -1:
                     return print("No se ha seleccionado ningún metodo")

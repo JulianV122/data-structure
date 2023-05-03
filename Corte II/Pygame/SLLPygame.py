@@ -165,7 +165,7 @@ class SingleLinkedList:
     def remove_duplicates(self,value_to_remove):
         current_node= self.head
         next_node = current_node.next
-        if self.find_duplicates(value_to_remove) > 1:
+        if self.count_duplicates(value_to_remove) > 1:
             while current_node != None:
                 if current_node.value == value_to_remove:
                     index = self.get_node_index(current_node.value)
@@ -174,15 +174,40 @@ class SingleLinkedList:
                 else:
                     current_node=current_node.next
 
-    def find_duplicates (self,value_duplicate):
+    def count_duplicates (self,value_duplicate):
         counter = 0
         current_node= self.head 
         while current_node != None:
             if current_node.value==value_duplicate:
                 counter+=1
             current_node=current_node.next
-        print (counter)
         return counter
+
+    def unite_duplicates (self):
+        current_node = self.head
+        new_list=[]
+        while current_node != None:
+            if current_node.value in new_list:
+                index=new_list.index(current_node.value)
+                new_list.insert(index+1,current_node.value)
+            else:
+                new_list.append(current_node.value)
+            current_node=current_node.next
+        print("LISTA ACOMODADA")
+        print(new_list)
+        return new_list
+
+    def replace_list(self):
+        list1=self.unite_duplicates()
+        print("LISTA PARA ACTUALIZAR")
+        print(list1)
+        current_node = self.head
+        i=0
+        while current_node!=None:
+            index = self.get_node_index(current_node.value)
+            current_node.value = list1[i]
+            current_node=current_node.next
+            i+=1
 
 
     def get_length_node(self):
