@@ -35,7 +35,7 @@ class interface:
         self.combo_box = pygame.Rect(400,282,250,15)
         self.combo_box_pos = pygame.Rect(900,282,250,15)
         self.list_pos = ["1"]
-        self.combo = ComboBox(self.screen,["Agregar al principio","Agregar al final","Eliminar el primero","Eliminar el ultimo","Invertir lista","Eliminar todos los elementos","Eliminar por posición","Insertar por posición","Actualizar por posición"],self.combo_box,"Black","Arial Black",15,4,"White","White",40," Seleccione una opcion")
+        self.combo = ComboBox(self.screen,["Agregar al principio","Agregar al final","Eliminar el primero","Eliminar el ultimo","Invertir lista","Eliminar todos los elementos","Eliminar por posición","Insertar por posición","Actualizar por posición","Eliminar nodos duplicados"],self.combo_box,"Black","Arial Black",15,4,"White","White",40," Seleccione una opcion")
         self.combo_pos = ComboBox(self.screen,self.list_pos,self.combo_box_pos,"Black","Arial Black",15,4,"White","White",40," Seleccione la posición")
         self.rectaux = pygame.Rect(0,0,0,0)
         self.rectaccept = pygame.Rect(1070,360,140,30)
@@ -181,7 +181,7 @@ class interface:
                 self.flag_head = False
                 self.SLL.show_list()
             elif self.Rectcrocodile.collidepoint(loc):
-                self.SLL.create_node_sll_unshift("Crocodile")
+                self.SLL.create_node_sll_unshift("crocodile")
                 self.rectaux = self.Rectcrocodile
                 self.flag_head = False
                 self.SLL.show_list()
@@ -242,6 +242,8 @@ class interface:
                 elif self.combo.getIndex()== 9 and self.combo.getIndex()!=-1:
                     self.SLL.update_node_value(self.combo_pos.getIndex(),self.aux_node)
                     self.aux_node=None
+                elif self.combo.getIndex()==10:
+                    self.SLL.remove_duplicates(self.aux_node)
             if self.SLL.length==0:
                 self.flag_head=True
             self.SLL.show_list()
@@ -294,6 +296,7 @@ class interface:
     def draw_grafo(self):
         pygame.draw.rect(self.screen,"black",self.Rect)
         pygame.draw.rect(self.screen,"grey",self.Rect2,border_radius=4)
+
 
 
 #Run

@@ -162,6 +162,29 @@ class SingleLinkedList:
             else:
                 print(" >>> No se encontro el nodo<<<")
 
+    def remove_duplicates(self,value_to_remove):
+        current_node= self.head
+        next_node = current_node.next
+        if self.find_duplicates(value_to_remove) > 1:
+            while current_node != None:
+                if current_node.value == value_to_remove:
+                    index = self.get_node_index(current_node.value)
+                    current_node=next_node
+                    self.remove_node(index)
+                else:
+                    current_node=current_node.next
+
+    def find_duplicates (self,value_duplicate):
+        counter = 0
+        current_node= self.head 
+        while current_node != None:
+            if current_node.value==value_duplicate:
+                counter+=1
+            current_node=current_node.next
+        print (counter)
+        return counter
+
+
     def get_length_node(self):
         return self.length
     
@@ -203,6 +226,8 @@ class SingleLinkedList:
         self.head=None
         self.tail=None
         self.length=0
+
+
 
     def verify_list(self):
         if self.length==0:
