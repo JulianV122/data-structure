@@ -228,6 +228,8 @@ class interface:
                     self.SLL.remove_all_nodes()
                 elif self.combo.getIndex() == 7 and self.combo_pos.getIndex != -1:
                     self.SLL.remove_node(self.combo_pos.getIndex())
+                elif self.combo.getIndex()==10:
+                    self.SLL.remove_duplicates()
                 elif self.combo.getIndex()==11:
                     self.SLL.replace_list()
             if self.rectaccept.collidepoint(pygame.mouse.get_pos()) and self.aux_node is not None:
@@ -245,8 +247,6 @@ class interface:
                 elif self.combo.getIndex()== 9 and self.combo.getIndex()!=-1:
                     self.SLL.update_node_value(self.combo_pos.getIndex(),self.aux_node)
                     self.aux_node=None
-                elif self.combo.getIndex()==10:
-                    self.SLL.remove_duplicates(self.aux_node)
             if self.SLL.length==0:
                 self.flag_head=True
             self.SLL.show_list()
