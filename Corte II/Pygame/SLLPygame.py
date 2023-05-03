@@ -37,7 +37,7 @@ class SingleLinkedList:
             print("La lista simplentente enlazada si tiene nodos")
         """
         
-        if self.head == None:
+        if self.length == 0:
             #Al nuevo nodo se convierte en la cabeza y cola de la lista
             self.head = new_node
             self.tail = new_node
@@ -166,12 +166,12 @@ class SingleLinkedList:
         list2=self.list_unique()
         print("LISTA PARA ACTUALIZAR")
         print(list2)
-        size=0
-        for value in list2:
-            size=size+1
         self.remove_all_nodes()
-        for i in range(1,size):
+        length = len(list2)
+        i=0
+        while i < length:
             self.create_node_sll_ends(list2[i])
+            i+=1
 
 
     def list_unique(self):

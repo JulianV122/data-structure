@@ -1,1 +1,4 @@
-self.show_text(Footer3,580,690)
+
+
+
+#Dibujar las imagenes en pantalla
