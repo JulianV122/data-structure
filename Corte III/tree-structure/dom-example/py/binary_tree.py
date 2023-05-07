@@ -29,9 +29,15 @@ class BinaryTree:
                     #Si existe nodo derecho se inserta el nodoen el subárbol derecho
                     self.insert(root.right_node,node)
             
-    
     def print_tree (self,root):
         if root is not None:
             self.print_tree(root.left_node)
             print(root.value)
             self.print_tree(root.right_node)
+
+    def minValue(self,root):
+            current = root
+            # loop down to find the leftmost leaf
+            while(current.left_node is not None):
+                current = current.left_node
+            print(f"el valor menor del arbol es {current.value}")
