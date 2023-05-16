@@ -4,6 +4,7 @@ import webbrowser
 from SLLPygame import SingleLinkedList
 from combo_box import ComboBox
 from pilas import pilas
+from Blackjack import blackjack
 
 class interface:
     def __init__(self):
@@ -42,6 +43,7 @@ class interface:
         self.menu = "SLL"
         self.aux_error = False
         self.pilas=pilas(self.screen)
+        self.blackjack = blackjack(self.screen)
 
 
 #Crear Texto
@@ -82,11 +84,10 @@ class interface:
             self.show_text(SelPos,700,280)
             self.show_text(Estado,200,450)
             self.show_text(ACEPTAR,1100,366)
-        
-        #if self.menu == "PILAS":
 
         if self.aux_error == True:
             self.show_text(ERROR,850,550)
+
         self.show_text(SLL,75,25)
         self.show_text(PILAS,500,25)
         self.show_text(GRAFOS,1100,25)
@@ -119,24 +120,20 @@ class interface:
             self.screen.blit(cat,(700,350))
             self.screen.blit(crab,(820,350))
             self.screen.blit(crocodile,(940,350))
-            self.screen.blit(iconLista,(45,25))
-            self.screen.blit(iconLista,(470,25))
-            self.screen.blit(iconGrafo,(1070,25))
-            self.screen.blit(logoUAM,(1165,662))
-            self.screen.blit(logoGit,(732,670))
-        if self.menu == "PILAS":
-            self.screen.blit(iconLista,(45,25))
-            self.screen.blit(iconLista,(470,25))
-            self.screen.blit(iconGrafo,(1070,25))
-            self.screen.blit(logoUAM,(1165,662))
-            self.screen.blit(logoGit,(732,670))
-            self.pilas.draw_images_pilas()
             
-        
+        self.screen.blit(iconLista,(45,25))
+        self.screen.blit(iconLista,(470,25))
+        self.screen.blit(iconGrafo,(1070,25))
+        self.screen.blit(logoUAM,(1165,662))
+        self.screen.blit(logoGit,(732,670))
 
 
 #Dibujar rectangulos en pantalla
     def draw_screen(self):
+        pygame.draw.rect(self.screen,"Black",self.rectgit,-1,0)
+        pygame.draw.rect(self.screen,"gray70",self.sll_menu,-1,0)
+        pygame.draw.rect(self.screen,"gray70",self.pilas_menu,-1,0)
+        pygame.draw.rect(self.screen,"gray70",self.grafo_menu,-1,0)
         if self.menu=="SLL":
             self.screen.fill("grey")
             pygame.draw.rect(self.screen,"black",self.Rect)
@@ -157,10 +154,6 @@ class interface:
             pygame.draw.rect(self.screen,"black",self.combo_box_pos,border_radius=3)
             pygame.draw.rect(self.screen,"chartreuse3",self.rectaccept)
 
-        pygame.draw.rect(self.screen,"Black",self.rectgit,-1,0)
-        pygame.draw.rect(self.screen,"gray70",self.sll_menu,-1,0)
-        pygame.draw.rect(self.screen,"gray70",self.pilas_menu,-1,0)
-        pygame.draw.rect(self.screen,"gray70",self.grafo_menu,-1,0)
 
 
 #Mostrar las imagenes
@@ -307,7 +300,7 @@ class interface:
                 if event.type == pygame.MOUSEBUTTONUP:
                     if event.button == 1 :
                         self.clicking = False
-            pygame.draw.rect(self.screen,"WHITE",(0,60,1280,600))
+            pygame.draw.rect(self.screen,"Gray",(0,0,1280,720))
             self.is_click_menu()
             self.draw_screen()
             self.draw_images()
@@ -318,6 +311,9 @@ class interface:
                 self.combo_pos.draw()
                 self.combo.draw()
                 self.update_combo_pos()
+            if self.menu =="PILAS":
+                self.blackjack.all_functions_blackjack()
+
             pygame.display.flip()
 
 

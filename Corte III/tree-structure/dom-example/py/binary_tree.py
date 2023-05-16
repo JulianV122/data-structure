@@ -37,7 +37,12 @@ class BinaryTree:
 
     def minValue(self,root):
             current = root
-            # loop down to find the leftmost leaf
             while(current.left_node is not None):
                 current = current.left_node
             print(f"el valor menor del arbol es {current.value}")
+
+    def maxValue(self,root):
+            current = root
+            while(current.right_node is not None):
+                current = current.right_node
+            print(f"el valor mayor del arbol es {current.value}")

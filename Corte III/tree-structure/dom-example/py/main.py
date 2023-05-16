@@ -19,3 +19,4 @@ root.insert(root,BinaryTree(21))
 
 root.print_tree(root)
 root.minValue(root)
+root.maxValue(root)
