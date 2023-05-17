@@ -5,6 +5,7 @@ class blackjack:
     def __init__(self,screen):
         self.screen = screen
         self.rectStart = pygame.Rect(309,88,92,34)
+        self.rectRestart = pygame.Rect(309,140,92,34)
         self.rectPedirCarta = pygame.Rect(800,265,100,34)
         self.rectPlantarmeJ1=pygame.Rect(192,463,92,34)
         self.rectPlantarmeJ2=pygame.Rect(642,530,92,34)
@@ -38,6 +39,7 @@ class blackjack:
         self.drawText("JUGADOR 3","White","Arial",20,990,473)
         self.drawText("PLANTARME","White","Arial",16,1130,473)
         self.drawText("PEDIR CARTA","White","Arial",16,803,273)
+        self.drawText("RESTART","White","Arial",20,320,145)
         self.drawText(self.crupier.player1.status,"White","Arial",16,130,303)
         self.drawText(self.crupier.player2.status,"White","Arial",16,583,372)
         self.drawText(self.crupier.player3.status,"White","Arial",16,1060,303)
@@ -58,6 +60,8 @@ class blackjack:
         pygame.draw.rect(self.screen,"Orange",self.rectPlantarmeJ1)
         pygame.draw.rect(self.screen,"Orange",self.rectPlantarmeJ2)
         pygame.draw.rect(self.screen,"Orange",self.rectPlantarmeJ3)
+        pygame.draw.rect(self.screen,"Orange",self.rectRestart)
+
 
     def all_functions_blackjack(self):
         self.draw_images_blackjack()
@@ -65,11 +69,16 @@ class blackjack:
         self.show_text_blackjack()
         self.is_start()
         self.game()
+        self.is_restart()
 
     def is_start(self):
         if self.rectStart.collidepoint(pygame.mouse.get_pos()) and pygame.mouse.get_pressed()[0] and not self.initial:
             self.initial=True 
             self.crupier.asign_players_cards()
+
+    def is_restart(self):
+        if self.rectRestart.collidepoint(pygame.mouse.get_pos()) and pygame.mouse.get_pressed()[0] and self.initial:
+            self.crupier.empty_cards()
 
     def game(self):
         self.turn=self.crupier.turns(self.rectPlantarmeJ1,self.rectPlantarmeJ2,self.rectPlantarmeJ3,self.rectPedirCarta,self.initial)

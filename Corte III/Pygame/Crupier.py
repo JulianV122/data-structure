@@ -44,6 +44,12 @@ class crupier:
         for player in self.players:
             player.show_card()
 
+    def empty_cards(self):
+        self.__init__(self.screen)
+        self.asign_players_cards()
+        #for player in self.players:
+            #player.cards.clear()
+
     def turns(self,plantar1,plantar2,plantar3,pedir,start):
         if start is True:
             if self.turn == 1:
