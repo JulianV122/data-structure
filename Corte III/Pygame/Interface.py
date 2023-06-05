@@ -5,6 +5,7 @@ from SLLPygame import SingleLinkedList
 from combo_box import ComboBox
 from pilas import pilas
 from Blackjack import blackjack
+from Sustentacion import facebook
 
 class interface:
     def __init__(self):
@@ -44,6 +45,7 @@ class interface:
         self.aux_error = False
         self.pilas=pilas(self.screen)
         self.blackjack = blackjack(self.screen)
+        self.face = facebook(self.screen)
 
 
 #Crear Texto
@@ -313,6 +315,9 @@ class interface:
                 self.update_combo_pos()
             if self.menu =="PILAS":
                 self.blackjack.all_functions_blackjack()
+
+            if self.menu == "GRAFO":
+                self.face.run()
 
             pygame.display.flip()
 

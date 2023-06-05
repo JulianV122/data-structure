@@ -2,555 +2,481 @@
   "users": [
     {
       "id": 1,
-      "name": "William Walker",
-      "email": "William Walker@example.com",
+      "name": "Michael Kelly",
+      "email": "Michael Kelly@example.com",
       "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/female/William%20Walker.png",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Michael%20Kelly.png",
       "liked_photos": [],
       "family": [],
       "groups": [],
-      "communities": []
+      "communities": [
+        {
+          "id": "46",
+          "name": "NINTENDO",
+          "profile_image_url": "NINTENDO.png"
+        }
+      ],
+      "city": "Pereira"
     },
     {
       "id": 2,
-      "name": "Cynthia Kent",
-      "email": "Cynthia Kent@example.com",
+      "name": "Travis Green",
+      "email": "Travis Green@example.com",
       "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/female/Cynthia%20Kent.png",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Travis%20Green.png",
       "liked_photos": [],
       "family": [
         {
-          "name": "William Walker",
-          "relation": "Mother"
+          "name": "Michael Kelly",
+          "relation": "Sibling",
+          "id": 1,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Michael%20Kelly.png"
         }
       ],
       "groups": [],
-      "communities": []
+      "communities": [
+        {
+          "id": "42",
+          "name": "PS",
+          "profile_image_url": "PS.png"
+        },
+        {
+          "id": "40",
+          "name": "PC",
+          "profile_image_url": "PC.png"
+        }
+      ],
+      "city": "Manizales"
     },
     {
       "id": 3,
-      "name": "Kelly Cain",
-      "email": "Kelly Cain@example.com",
+      "name": "Erin Reid",
+      "email": "Erin Reid@example.com",
       "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/female/Kelly%20Cain.png",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Erin%20Reid.png",
       "liked_photos": [],
       "family": [
         {
-          "name": "William Walker",
-          "relation": "Father"
+          "name": "Travis Green",
+          "relation": "Father",
+          "id": 2,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Travis%20Green.png"
         },
         {
-          "name": "Cynthia Kent",
-          "relation": "Mother"
+          "name": "Michael Kelly",
+          "relation": "Father",
+          "id": 1,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Michael%20Kelly.png"
         }
       ],
       "groups": [],
-      "communities": []
+      "communities": [
+        {
+          "id": "21",
+          "name": "PC",
+          "profile_image_url": "PC.png"
+        },
+        {
+          "id": "44",
+          "name": "PC",
+          "profile_image_url": "PC.png"
+        },
+        {
+          "id": "10",
+          "name": "XBOX",
+          "profile_image_url": "XBOX.png"
+        }
+      ],
+      "city": "Manizales"
     },
     {
       "id": 4,
-      "name": "Ashley Fuentes",
-      "email": "Ashley Fuentes@example.com",
+      "name": "Richard Miller",
+      "email": "Richard Miller@example.com",
       "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/male/Ashley%20Fuentes.png",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Richard%20Miller.png",
       "liked_photos": [],
       "family": [
         {
-          "name": "Kelly Cain",
-          "relation": "Father"
+          "name": "Travis Green",
+          "relation": "Mother",
+          "id": 2,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Travis%20Green.png"
         },
         {
-          "name": "William Walker",
-          "relation": "Mother"
+          "name": "Erin Reid",
+          "relation": "Father",
+          "id": 3,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Erin%20Reid.png"
         },
         {
-          "name": "Cynthia Kent",
-          "relation": "Mother"
+          "name": "Michael Kelly",
+          "relation": "Sibling",
+          "id": 1,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Michael%20Kelly.png"
         }
       ],
       "groups": [],
-      "communities": []
+      "communities": [
+        {
+          "id": "18",
+          "name": "PS",
+          "profile_image_url": "PS.png"
+        },
+        {
+          "id": "27",
+          "name": "XBOX",
+          "profile_image_url": "XBOX.png"
+        },
+        {
+          "id": "22",
+          "name": "XBOX",
+          "profile_image_url": "XBOX.png"
+        },
+        {
+          "id": "23",
+          "name": "PC",
+          "profile_image_url": "PC.png"
+        }
+      ],
+      "city": "Cartagena"
     },
     {
       "id": 5,
-      "name": "Eric Nelson",
-      "email": "Eric Nelson@example.com",
+      "name": "Roger Dixon",
+      "email": "Roger Dixon@example.com",
       "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/male/Eric%20Nelson.png",
+      "profile_image_url": "https://avatars.dicebear.com/api/male/Roger%20Dixon.png",
       "liked_photos": [],
       "family": [
         {
-          "name": "Cynthia Kent",
-          "relation": "Father"
+          "name": "Erin Reid",
+          "relation": "Mother",
+          "id": 3,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Erin%20Reid.png"
         },
         {
-          "name": "Ashley Fuentes",
-          "relation": "Sibling"
+          "name": "Michael Kelly",
+          "relation": "Sibling",
+          "id": 1,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Michael%20Kelly.png"
         }
       ],
       "groups": [],
-      "communities": []
+      "communities": [
+        {
+          "id": "35",
+          "name": "XBOX",
+          "profile_image_url": "XBOX.png"
+        },
+        {
+          "id": "18",
+          "name": "PS",
+          "profile_image_url": "PS.png"
+        },
+        {
+          "id": "28",
+          "name": "XBOX",
+          "profile_image_url": "XBOX.png"
+        }
+      ],
+      "city": "Cartagena"
     },
     {
       "id": 6,
-      "name": "Jeffrey Thomas",
-      "email": "Jeffrey Thomas@example.com",
+      "name": "Joseph Schroeder",
+      "email": "Joseph Schroeder@example.com",
       "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/female/Jeffrey%20Thomas.png",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Joseph%20Schroeder.png",
       "liked_photos": [],
       "family": [
         {
-          "name": "Kelly Cain",
-          "relation": "Sibling"
+          "name": "Richard Miller",
+          "relation": "Father",
+          "id": 4,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Richard%20Miller.png"
         },
         {
-          "name": "William Walker",
-          "relation": "Sibling"
+          "name": "Michael Kelly",
+          "relation": "Mother",
+          "id": 1,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Michael%20Kelly.png"
         },
         {
-          "name": "Ashley Fuentes",
-          "relation": "Sibling"
+          "name": "Erin Reid",
+          "relation": "Mother",
+          "id": 3,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Erin%20Reid.png"
         }
       ],
       "groups": [],
-      "communities": []
+      "communities": [
+        {
+          "id": "14",
+          "name": "XBOX",
+          "profile_image_url": "XBOX.png"
+        },
+        {
+          "id": "23",
+          "name": "NINTENDO",
+          "profile_image_url": "NINTENDO.png"
+        },
+        {
+          "id": "28",
+          "name": "NINTENDO",
+          "profile_image_url": "NINTENDO.png"
+        },
+        {
+          "id": "10",
+          "name": "XBOX",
+          "profile_image_url": "XBOX.png"
+        }
+      ],
+      "city": "Pereira"
     },
     {
       "id": 7,
-      "name": "James Boyer",
-      "email": "James Boyer@example.com",
+      "name": "Jon Rangel",
+      "email": "Jon Rangel@example.com",
       "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/male/James%20Boyer.png",
+      "profile_image_url": "https://avatars.dicebear.com/api/male/Jon%20Rangel.png",
       "liked_photos": [],
       "family": [
         {
-          "name": "Cynthia Kent",
-          "relation": "Sibling"
+          "name": "Travis Green",
+          "relation": "Mother",
+          "id": 2,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Travis%20Green.png"
         },
         {
-          "name": "Jeffrey Thomas",
-          "relation": "Mother"
+          "name": "Erin Reid",
+          "relation": "Mother",
+          "id": 3,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Erin%20Reid.png"
         },
         {
-          "name": "Kelly Cain",
-          "relation": "Mother"
+          "name": "Richard Miller",
+          "relation": "Father",
+          "id": 4,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Richard%20Miller.png"
         }
       ],
       "groups": [],
-      "communities": []
+      "communities": [
+        {
+          "id": "43",
+          "name": "PC",
+          "profile_image_url": "PC.png"
+        },
+        {
+          "id": "32",
+          "name": "XBOX",
+          "profile_image_url": "XBOX.png"
+        },
+        {
+          "id": "29",
+          "name": "NINTENDO",
+          "profile_image_url": "NINTENDO.png"
+        },
+        {
+          "id": "42",
+          "name": "PC",
+          "profile_image_url": "PC.png"
+        }
+      ],
+      "city": "Barranquilla"
     },
     {
       "id": 8,
-      "name": "Caleb Smith",
-      "email": "Caleb Smith@example.com",
+      "name": "Jessica Robinson",
+      "email": "Jessica Robinson@example.com",
       "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/male/Caleb%20Smith.png",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Jessica%20Robinson.png",
       "liked_photos": [],
       "family": [
         {
-          "name": "William Walker",
-          "relation": "Mother"
+          "name": "Travis Green",
+          "relation": "Mother",
+          "id": 2,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Travis%20Green.png"
         },
         {
-          "name": "Cynthia Kent",
-          "relation": "Father"
+          "name": "Michael Kelly",
+          "relation": "Father",
+          "id": 1,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Michael%20Kelly.png"
         }
       ],
       "groups": [],
-      "communities": []
+      "communities": [
+        {
+          "id": "21",
+          "name": "NINTENDO",
+          "profile_image_url": "NINTENDO.png"
+        },
+        {
+          "id": "46",
+          "name": "PS",
+          "profile_image_url": "PS.png"
+        },
+        {
+          "id": "19",
+          "name": "PC",
+          "profile_image_url": "PC.png"
+        },
+        {
+          "id": "34",
+          "name": "PS",
+          "profile_image_url": "PS.png"
+        }
+      ],
+      "city": "Cartagena"
     },
     {
       "id": 9,
-      "name": "Lisa Lucas",
-      "email": "Lisa Lucas@example.com",
+      "name": "Ryan West",
+      "email": "Ryan West@example.com",
       "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/female/Lisa%20Lucas.png",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Ryan%20West.png",
       "liked_photos": [],
       "family": [
         {
-          "name": "Eric Nelson",
-          "relation": "Father"
+          "name": "Roger Dixon",
+          "relation": "Father",
+          "id": 5,
+          "profile_image_url": "https://avatars.dicebear.com/api/male/Roger%20Dixon.png"
         },
         {
-          "name": "James Boyer",
-          "relation": "Sibling"
-        },
-        {
-          "name": "Jeffrey Thomas",
-          "relation": "Mother"
+          "name": "Travis Green",
+          "relation": "Father",
+          "id": 2,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Travis%20Green.png"
         }
       ],
       "groups": [],
-      "communities": []
+      "communities": [
+        {
+          "id": "18",
+          "name": "PC",
+          "profile_image_url": "PC.png"
+        },
+        {
+          "id": "33",
+          "name": "XBOX",
+          "profile_image_url": "XBOX.png"
+        },
+        {
+          "id": "34",
+          "name": "XBOX",
+          "profile_image_url": "XBOX.png"
+        },
+        {
+          "id": "44",
+          "name": "XBOX",
+          "profile_image_url": "XBOX.png"
+        }
+      ],
+      "city": "Barranquilla"
     },
     {
       "id": 10,
-      "name": "Alicia Mcdaniel",
-      "email": "Alicia Mcdaniel@example.com",
+      "name": "Cory Allen",
+      "email": "Cory Allen@example.com",
       "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/male/Alicia%20Mcdaniel.png",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Cory%20Allen.png",
       "liked_photos": [],
       "family": [
         {
-          "name": "Jeffrey Thomas",
-          "relation": "Mother"
+          "name": "Richard Miller",
+          "relation": "Mother",
+          "id": 4,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Richard%20Miller.png"
         },
         {
-          "name": "Lisa Lucas",
-          "relation": "Sibling"
+          "name": "Michael Kelly",
+          "relation": "Sibling",
+          "id": 1,
+          "profile_image_url": "https://avatars.dicebear.com/api/female/Michael%20Kelly.png"
         }
       ],
       "groups": [],
-      "communities": []
-    },
-    {
-      "id": 11,
-      "name": "Shari Young",
-      "email": "Shari Young@example.com",
-      "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/male/Shari%20Young.png",
-      "liked_photos": [],
-      "family": [
+      "communities": [
         {
-          "name": "Cynthia Kent",
-          "relation": "Sibling"
+          "id": "47",
+          "name": "PS",
+          "profile_image_url": "PS.png"
         },
         {
-          "name": "Kelly Cain",
-          "relation": "Mother"
+          "id": "15",
+          "name": "NINTENDO",
+          "profile_image_url": "NINTENDO.png"
         },
         {
-          "name": "William Walker",
-          "relation": "Mother"
+          "id": "32",
+          "name": "PC",
+          "profile_image_url": "PC.png"
+        },
+        {
+          "id": "20",
+          "name": "PC",
+          "profile_image_url": "PC.png"
         }
       ],
-      "groups": [],
-      "communities": []
-    },
-    {
-      "id": 12,
-      "name": "Nichole Mitchell",
-      "email": "Nichole Mitchell@example.com",
-      "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/female/Nichole%20Mitchell.png",
-      "liked_photos": [],
-      "family": [
-        {
-          "name": "Caleb Smith",
-          "relation": "Mother"
-        },
-        {
-          "name": "Jeffrey Thomas",
-          "relation": "Mother"
-        },
-        {
-          "name": "Kelly Cain",
-          "relation": "Father"
-        }
-      ],
-      "groups": [],
-      "communities": []
-    },
-    {
-      "id": 13,
-      "name": "Dustin Roy",
-      "email": "Dustin Roy@example.com",
-      "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/male/Dustin%20Roy.png",
-      "liked_photos": [],
-      "family": [
-        {
-          "name": "Ashley Fuentes",
-          "relation": "Sibling"
-        },
-        {
-          "name": "James Boyer",
-          "relation": "Father"
-        },
-        {
-          "name": "Lisa Lucas",
-          "relation": "Father"
-        }
-      ],
-      "groups": [],
-      "communities": []
-    },
-    {
-      "id": 14,
-      "name": "Robert Sanchez",
-      "email": "Robert Sanchez@example.com",
-      "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/female/Robert%20Sanchez.png",
-      "liked_photos": [],
-      "family": [
-        {
-          "name": "Alicia Mcdaniel",
-          "relation": "Mother"
-        },
-        {
-          "name": "Caleb Smith",
-          "relation": "Father"
-        },
-        {
-          "name": "James Boyer",
-          "relation": "Mother"
-        }
-      ],
-      "groups": [],
-      "communities": []
-    },
-    {
-      "id": 15,
-      "name": "James Turner",
-      "email": "James Turner@example.com",
-      "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/male/James%20Turner.png",
-      "liked_photos": [],
-      "family": [
-        {
-          "name": "Alicia Mcdaniel",
-          "relation": "Mother"
-        },
-        {
-          "name": "William Walker",
-          "relation": "Mother"
-        },
-        {
-          "name": "Lisa Lucas",
-          "relation": "Mother"
-        }
-      ],
-      "groups": [],
-      "communities": []
-    },
-    {
-      "id": 16,
-      "name": "Shawn Mcdonald",
-      "email": "Shawn Mcdonald@example.com",
-      "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/male/Shawn%20Mcdonald.png",
-      "liked_photos": [],
-      "family": [
-        {
-          "name": "Jeffrey Thomas",
-          "relation": "Sibling"
-        },
-        {
-          "name": "Shari Young",
-          "relation": "Sibling"
-        },
-        {
-          "name": "James Boyer",
-          "relation": "Father"
-        }
-      ],
-      "groups": [],
-      "communities": []
-    },
-    {
-      "id": 17,
-      "name": "Zachary Rodriguez",
-      "email": "Zachary Rodriguez@example.com",
-      "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/female/Zachary%20Rodriguez.png",
-      "liked_photos": [],
-      "family": [
-        {
-          "name": "Shawn Mcdonald",
-          "relation": "Father"
-        },
-        {
-          "name": "Ashley Fuentes",
-          "relation": "Father"
-        },
-        {
-          "name": "Shari Young",
-          "relation": "Sibling"
-        }
-      ],
-      "groups": [],
-      "communities": []
-    },
-    {
-      "id": 18,
-      "name": "Michael Garcia",
-      "email": "Michael Garcia@example.com",
-      "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/male/Michael%20Garcia.png",
-      "liked_photos": [],
-      "family": [
-        {
-          "name": "Lisa Lucas",
-          "relation": "Mother"
-        },
-        {
-          "name": "Kelly Cain",
-          "relation": "Mother"
-        },
-        {
-          "name": "James Turner",
-          "relation": "Sibling"
-        }
-      ],
-      "groups": [],
-      "communities": []
-    },
-    {
-      "id": 19,
-      "name": "Cheryl Reid",
-      "email": "Cheryl Reid@example.com",
-      "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/female/Cheryl%20Reid.png",
-      "liked_photos": [],
-      "family": [
-        {
-          "name": "Shawn Mcdonald",
-          "relation": "Sibling"
-        },
-        {
-          "name": "Dustin Roy",
-          "relation": "Father"
-        },
-        {
-          "name": "Lisa Lucas",
-          "relation": "Father"
-        }
-      ],
-      "groups": [],
-      "communities": []
-    },
-    {
-      "id": 20,
-      "name": "Christine Ryan",
-      "email": "Christine Ryan@example.com",
-      "birthdate": "1990-01-01",
-      "profile_image_url": "https://avatars.dicebear.com/api/female/Christine%20Ryan.png",
-      "liked_photos": [],
-      "family": [
-        {
-          "name": "Jeffrey Thomas",
-          "relation": "Mother"
-        },
-        {
-          "name": "Michael Garcia",
-          "relation": "Sibling"
-        },
-        {
-          "name": "William Walker",
-          "relation": "Father"
-        }
-      ],
-      "groups": [],
-      "communities": []
+      "city": "Barranquilla"
     }
   ],
   "relationships": {
     "1": [
-      16,
-      5
+      2,
+      6,
+      7
     ],
     "2": [
-      7,
-      11,
-      4
+      1
     ],
     "3": [
-      7,
-      4,
-      3
+      2,
+      1,
+      6
     ],
     "4": [
-      17
+      2,
+      1
     ],
     "5": [
+      9,
       4,
-      5,
-      16
+      3,
+      7,
+      8
     ],
     "6": [
-      5,
-      10,
-      11,
-      4
+      1,
+      9
     ],
     "7": [
-      14,
-      1
+      8,
+      3,
+      10,
+      5
     ],
     "8": [
-      19,
-      5,
-      8,
-      11,
-      3
+      4,
+      1,
+      3,
+      5
     ],
     "9": [
-      18,
-      13
-    ],
-    "10": [
-      19,
       7,
-      13,
+      4,
       8,
-      10
-    ],
-    "11": [
-      18,
-      8,
-      13,
-      12
-    ],
-    "12": [
-      9,
-      11
-    ],
-    "13": [
-      5,
-      15,
-      3,
-      6,
-      20
-    ],
-    "14": [
-      8
-    ],
-    "15": [
-      15,
-      5,
-      8
-    ],
-    "16": [
-      19,
-      1,
-      5,
-      10
-    ],
-    "17": [
-      18,
-      6,
-      5,
-      3,
       1
     ],
-    "18": [
-      11,
-      2,
-      4,
-      7,
-      16
-    ],
-    "19": [
-      16,
-      19,
-      4
-    ],
-    "20": [
-      2,
-      5,
+    "10": [
+      8,
       9,
-      12,
-      19
+      7,
+      10
     ]
   }
 }
