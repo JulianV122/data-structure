@@ -1,0 +1,556 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "William Walker",
+      "email": "William Walker@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/William%20Walker.png",
+      "liked_photos": [],
+      "family": [],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 2,
+      "name": "Cynthia Kent",
+      "email": "Cynthia Kent@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Cynthia%20Kent.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "William Walker",
+          "relation": "Mother"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 3,
+      "name": "Kelly Cain",
+      "email": "Kelly Cain@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Kelly%20Cain.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "William Walker",
+          "relation": "Father"
+        },
+        {
+          "name": "Cynthia Kent",
+          "relation": "Mother"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 4,
+      "name": "Ashley Fuentes",
+      "email": "Ashley Fuentes@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/male/Ashley%20Fuentes.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Kelly Cain",
+          "relation": "Father"
+        },
+        {
+          "name": "William Walker",
+          "relation": "Mother"
+        },
+        {
+          "name": "Cynthia Kent",
+          "relation": "Mother"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 5,
+      "name": "Eric Nelson",
+      "email": "Eric Nelson@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/male/Eric%20Nelson.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Cynthia Kent",
+          "relation": "Father"
+        },
+        {
+          "name": "Ashley Fuentes",
+          "relation": "Sibling"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 6,
+      "name": "Jeffrey Thomas",
+      "email": "Jeffrey Thomas@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Jeffrey%20Thomas.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Kelly Cain",
+          "relation": "Sibling"
+        },
+        {
+          "name": "William Walker",
+          "relation": "Sibling"
+        },
+        {
+          "name": "Ashley Fuentes",
+          "relation": "Sibling"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 7,
+      "name": "James Boyer",
+      "email": "James Boyer@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/male/James%20Boyer.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Cynthia Kent",
+          "relation": "Sibling"
+        },
+        {
+          "name": "Jeffrey Thomas",
+          "relation": "Mother"
+        },
+        {
+          "name": "Kelly Cain",
+          "relation": "Mother"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 8,
+      "name": "Caleb Smith",
+      "email": "Caleb Smith@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/male/Caleb%20Smith.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "William Walker",
+          "relation": "Mother"
+        },
+        {
+          "name": "Cynthia Kent",
+          "relation": "Father"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 9,
+      "name": "Lisa Lucas",
+      "email": "Lisa Lucas@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Lisa%20Lucas.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Eric Nelson",
+          "relation": "Father"
+        },
+        {
+          "name": "James Boyer",
+          "relation": "Sibling"
+        },
+        {
+          "name": "Jeffrey Thomas",
+          "relation": "Mother"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 10,
+      "name": "Alicia Mcdaniel",
+      "email": "Alicia Mcdaniel@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/male/Alicia%20Mcdaniel.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Jeffrey Thomas",
+          "relation": "Mother"
+        },
+        {
+          "name": "Lisa Lucas",
+          "relation": "Sibling"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 11,
+      "name": "Shari Young",
+      "email": "Shari Young@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/male/Shari%20Young.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Cynthia Kent",
+          "relation": "Sibling"
+        },
+        {
+          "name": "Kelly Cain",
+          "relation": "Mother"
+        },
+        {
+          "name": "William Walker",
+          "relation": "Mother"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 12,
+      "name": "Nichole Mitchell",
+      "email": "Nichole Mitchell@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Nichole%20Mitchell.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Caleb Smith",
+          "relation": "Mother"
+        },
+        {
+          "name": "Jeffrey Thomas",
+          "relation": "Mother"
+        },
+        {
+          "name": "Kelly Cain",
+          "relation": "Father"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 13,
+      "name": "Dustin Roy",
+      "email": "Dustin Roy@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/male/Dustin%20Roy.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Ashley Fuentes",
+          "relation": "Sibling"
+        },
+        {
+          "name": "James Boyer",
+          "relation": "Father"
+        },
+        {
+          "name": "Lisa Lucas",
+          "relation": "Father"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 14,
+      "name": "Robert Sanchez",
+      "email": "Robert Sanchez@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Robert%20Sanchez.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Alicia Mcdaniel",
+          "relation": "Mother"
+        },
+        {
+          "name": "Caleb Smith",
+          "relation": "Father"
+        },
+        {
+          "name": "James Boyer",
+          "relation": "Mother"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 15,
+      "name": "James Turner",
+      "email": "James Turner@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/male/James%20Turner.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Alicia Mcdaniel",
+          "relation": "Mother"
+        },
+        {
+          "name": "William Walker",
+          "relation": "Mother"
+        },
+        {
+          "name": "Lisa Lucas",
+          "relation": "Mother"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 16,
+      "name": "Shawn Mcdonald",
+      "email": "Shawn Mcdonald@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/male/Shawn%20Mcdonald.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Jeffrey Thomas",
+          "relation": "Sibling"
+        },
+        {
+          "name": "Shari Young",
+          "relation": "Sibling"
+        },
+        {
+          "name": "James Boyer",
+          "relation": "Father"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 17,
+      "name": "Zachary Rodriguez",
+      "email": "Zachary Rodriguez@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Zachary%20Rodriguez.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Shawn Mcdonald",
+          "relation": "Father"
+        },
+        {
+          "name": "Ashley Fuentes",
+          "relation": "Father"
+        },
+        {
+          "name": "Shari Young",
+          "relation": "Sibling"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 18,
+      "name": "Michael Garcia",
+      "email": "Michael Garcia@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/male/Michael%20Garcia.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Lisa Lucas",
+          "relation": "Mother"
+        },
+        {
+          "name": "Kelly Cain",
+          "relation": "Mother"
+        },
+        {
+          "name": "James Turner",
+          "relation": "Sibling"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 19,
+      "name": "Cheryl Reid",
+      "email": "Cheryl Reid@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Cheryl%20Reid.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Shawn Mcdonald",
+          "relation": "Sibling"
+        },
+        {
+          "name": "Dustin Roy",
+          "relation": "Father"
+        },
+        {
+          "name": "Lisa Lucas",
+          "relation": "Father"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    },
+    {
+      "id": 20,
+      "name": "Christine Ryan",
+      "email": "Christine Ryan@example.com",
+      "birthdate": "1990-01-01",
+      "profile_image_url": "https://avatars.dicebear.com/api/female/Christine%20Ryan.png",
+      "liked_photos": [],
+      "family": [
+        {
+          "name": "Jeffrey Thomas",
+          "relation": "Mother"
+        },
+        {
+          "name": "Michael Garcia",
+          "relation": "Sibling"
+        },
+        {
+          "name": "William Walker",
+          "relation": "Father"
+        }
+      ],
+      "groups": [],
+      "communities": []
+    }
+  ],
+  "relationships": {
+    "1": [
+      16,
+      5
+    ],
+    "2": [
+      7,
+      11,
+      4
+    ],
+    "3": [
+      7,
+      4,
+      3
+    ],
+    "4": [
+      17
+    ],
+    "5": [
+      4,
+      5,
+      16
+    ],
+    "6": [
+      5,
+      10,
+      11,
+      4
+    ],
+    "7": [
+      14,
+      1
+    ],
+    "8": [
+      19,
+      5,
+      8,
+      11,
+      3
+    ],
+    "9": [
+      18,
+      13
+    ],
+    "10": [
+      19,
+      7,
+      13,
+      8,
+      10
+    ],
+    "11": [
+      18,
+      8,
+      13,
+      12
+    ],
+    "12": [
+      9,
+      11
+    ],
+    "13": [
+      5,
+      15,
+      3,
+      6,
+      20
+    ],
+    "14": [
+      8
+    ],
+    "15": [
+      15,
+      5,
+      8
+    ],
+    "16": [
+      19,
+      1,
+      5,
+      10
+    ],
+    "17": [
+      18,
+      6,
+      5,
+      3,
+      1
+    ],
+    "18": [
+      11,
+      2,
+      4,
+      7,
+      16
+    ],
+    "19": [
+      16,
+      19,
+      4
+    ],
+    "20": [
+      2,
+      5,
+      9,
+      12,
+      19
+    ]
+  }
+}
